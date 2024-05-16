@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "jest.config.js",
   "scripts": {
-    "test": "jest --watchAll --coverage --verbose --silent --runInBand",
     "test:ex1": "jest exercice1/index.test.js --watchAll --verbose --coverage",
     "test:ex2": "jest exercice2/index.test.js  --watchAll --verbose --coverage",
     "test:ex3": "jest exercice3/index.test.js  --watchAll --verbose --coverage",
@@ -15,5 +14,8 @@
   "description": "",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "faker-br": "^0.1.0"
   }
 }
