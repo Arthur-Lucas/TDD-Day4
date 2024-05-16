@@ -1,5 +1,3 @@
-// exercices/exercice1/index.test.js
-
 const createDataset = require("./index");
 
 let dataset;
