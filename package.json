@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "main": "jest.config.js",
   "scripts": {
-    "test:ex1": "jest exercice1/index.test.js --watchAll --verbose --coverage",
-    "test:ex2": "jest exercice2/index.test.js  --watchAll --verbose --coverage",
-    "test:ex3": "jest exercice3/index.test.js  --watchAll --verbose --coverage",
+    "test:ex123": "jest exercice1-2-3/classes.spec.js --watchAll --verbose --coverage",
     "test:ex4": "jest exercice4/index.test.js  --watchAll --verbose --coverage",
     "test:ex5": "jest exercice5/index.test.js  --watchAll --verbose --coverage",
     "test:ex6": "jest exercice6/index.test.js  --watchAll --verbose --coverage"

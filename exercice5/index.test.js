@@ -1,4 +1,4 @@
-const faker = require("faker-br");
+const createDataset = require("./index");
 
 let dataset;
 
@@ -7,10 +7,7 @@ beforeAll(() => {
 });
 
 beforeEach(() => {
-  dataset = {
-    streetName: faker.address.streetName(),
-    streetNumber: faker.address.streetAddress(),
-  };
+  dataset = createDataset();
   console.log(`Created new dataset: ${JSON.stringify(dataset)}`);
 });
 
@@ -23,7 +20,7 @@ afterAll(() => {
   console.log("All tests completed.");
 });
 
-test("DatasetHavePropertyStreeName&NumberOK", () => {
+test("example test", () => {
   expect(dataset).toHaveProperty("streetName");
   expect(dataset).toHaveProperty("streetNumber");
   console.log(`Testing dataset: ${JSON.stringify(dataset)}`);
