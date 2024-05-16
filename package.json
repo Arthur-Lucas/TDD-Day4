@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "jest.config.js",
   "scripts": {
-    "test": "jest --watchAll --verbose --coverage"
+    "test:ex123": "jest exercice1-2-3/classes.spec.js --watchAll --verbose --coverage",
+    "test:ex4": "jest exercice4/index.test.js  --watchAll --verbose --coverage",
+    "test:ex5": "jest exercice5/index.test.js  --watchAll --verbose --coverage"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "faker-br": "^0.1.0"
   }
 }
-
-
