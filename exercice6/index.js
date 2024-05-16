@@ -3,8 +3,8 @@ const https = require('https');
 function calldependance(actionName) {
     return new Promise((resolve, reject) => {
         const options = {
-            hostname: 'us-east1-mon-projet-test-gp6.cloudfunctions.net',
-            path: `/TDD-deploy2/hotelGet?actionName=${actionName}`,
+            hostname: 'testing-cours-118ff93ae024.herokuapp.com',
+            path: `?actionName=${actionName}`,
             method: 'GET'
         };
 
