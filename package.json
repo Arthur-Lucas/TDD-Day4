@@ -1,0 +1,16 @@
+{
+  "name": "final_test",
+  "version": "1.0.0",
+  "main": "jest.config.js",
+  "scripts": {
+    "test": "jest --watchAll --verbose --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
+
+
