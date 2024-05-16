@@ -1,23 +1,21 @@
 const nock = require('nock');
-const { calldependance } = require('./index');
+const { calldependance } = require('./index'); // Remplacez par le chemin correct vers votre module
 
 describe('calldependance function', () => {
-    it('should return expected response for valid action name', async () => {
-        const mockResponse = 'Expected response';
+    it('should return correct response for a valid action name', async () => {
+        nock('https://testing-cours-118ff93ae024.herokuapp.com')
+            .get('/calldependance?name=Matis')
+            .reply(200, 'hello Matis');
 
-        nock('https://us-east1-mon-projet-test-gp6.cloudfunctions.net')
-            .get('/TDD-deploy2/hotelGet?actionName=validAction')
-            .reply(200, mockResponse);
-
-        const result = await calldependance('validAction');
-        expect(result).toBe(mockResponse); 
+        const response = await calldependance('Matis');
+        expect(response).toBe('hello Matis');
     });
 
     it('should handle errors correctly', async () => {
-        nock('https://us-east1-mon-projet-test-gp6.cloudfunctions.net')
-            .get('/TDD-deploy2/hotelGet?actionName=invalidAction')
+        nock('https://testing-cours-118ff93ae024.herokuapp.com')
+            .get('/calldependance?name=invalidName')
             .reply(500);
 
-        await expect(calldependance('invalidAction')).rejects.toThrow('Request failed with status code 500');
+        await expect(calldependance('invalidName')).rejects.toThrow('Request failed with status code 500');
     });
 });

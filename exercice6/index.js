@@ -4,7 +4,7 @@ function calldependance(actionName) {
     return new Promise((resolve, reject) => {
         const options = {
             hostname: 'testing-cours-118ff93ae024.herokuapp.com',
-            path: `?actionName=${actionName}`,
+            path: `/calldependance?name=${actionName}`,
             method: 'GET'
         };
 
